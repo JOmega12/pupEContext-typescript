@@ -33,8 +33,29 @@ export const DogProvider = ({children}) => {
       refetchDogs();
    }, [])
 
-   console.log(dogs, 'dogs')
+   
+   const addDog = (dog: Dog) => {
+      Requests.postDog({
+         name: dog.name,
+         description: dog.description,
+         image: dog.image,
+         isFavorite: false
+      })
+      .then(() => refetchDogs());
 
+   }
+
+   const deleteDog = (dog: Dog) => {
+      Requests.deleteDogRequest(dog)
+         .then(() => {
+            return refetchDogs();
+         })
+   }
+
+   const patchFavoriteDog = (dog: Dog) => {
+      Requests.patchFavoriteForDog(dog)
+         .then(() => refetchDogs());
+   }
 
    return (
       <DogContext.Provider 
