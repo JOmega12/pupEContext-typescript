@@ -57,6 +57,32 @@ export const DogProvider = ({children}) => {
          .then(() => refetchDogs());
    }
 
+   const favorite = dogs.filter((dog) => dog.isFavorite === true);
+   const unfavorite = dogs.filter((dog) => dog.isFavorite === false);
+
+   const favoriteDogCount = favorite.length;
+   const unfavoriteDogCount = unfavorite.length
+
+   const handleModeChange = (dogMode: string) => {
+      if (mode === dogMode) {
+         setMode('all');
+         return;
+      }
+      setMode(dogMode);
+   }
+
+
+   const filteredDogs = () => {
+      if (mode === 'favorite') {
+         return favorite
+      } else if (mode === 'unfavorite') {
+         return unfavorite
+      } else {
+         return dogs
+      }
+   }
+
+
    return (
       <DogContext.Provider 
          value={{
