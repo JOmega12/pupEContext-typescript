@@ -1,21 +1,12 @@
-import { ReactNode, createContext, useEffect, useState } from "react";
+import { ReactNode, createContext, useContext, useEffect, useState } from "react";
 import { Dog } from "../types";
 import { Requests } from "../api";
-
-type TDogContext = {
-   mode: string,
-   setMode: (mode: string) => void ,
-   children: React.ReactNode,
-}
-
-console.log(Dog, 'dog')
-
 
 export const DogContext = 
 // createContext<TDogContext | undefined>(undefined)
 createContext({})
 
-export const DogProvider = ({children}) => {
+export const DogProvider = ({children}: {children: React.ReactNode}) => {
    const [mode, setMode] = useState('all');
    const [dogs, setDogs] = useState<Dog[]>([]);
    const [isLoading, setIsLoading] = useState(false);
@@ -33,15 +24,16 @@ export const DogProvider = ({children}) => {
       refetchDogs();
    }, [])
 
-   
    const addDog = (dog: Dog) => {
       Requests.postDog({
+         id: dog.id,
          name: dog.name,
          description: dog.description,
          image: dog.image,
          isFavorite: false
       })
-      .then(() => refetchDogs());
+      .then(() => refetchDogs())
+      .catch((err) => console.log(err));
 
    }
 
@@ -50,11 +42,15 @@ export const DogProvider = ({children}) => {
          .then(() => {
             return refetchDogs();
          })
+      .catch((err) => console.log(err));
+
    }
 
    const patchFavoriteDog = (dog: Dog) => {
       Requests.patchFavoriteForDog(dog)
-         .then(() => refetchDogs());
+         .then(() => refetchDogs())
+         .catch((err) => console.log(err));
+
    }
 
    const favorite = dogs.filter((dog) => dog.isFavorite === true);
@@ -86,7 +82,7 @@ export const DogProvider = ({children}) => {
    return (
       <DogContext.Provider 
          value={{
-            mode, setMode
+            mode, setMode, addDog, deleteDog, patchFavoriteDog, favoriteDogCount, unfavoriteDogCount, filteredDogs, handleModeChange
          }}
       >
          {children}
@@ -94,3 +90,7 @@ export const DogProvider = ({children}) => {
    )
 }
 
+export const useDog = () => {
+   const context = useContext(DogContext)
+   return context;
+}
