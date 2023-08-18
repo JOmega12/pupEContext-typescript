@@ -7,7 +7,13 @@ export const Section = ({
   // No more props than these two allowed
   label: string;
   children: ReactNode;
+  handleModeChange: (dogMode: string) => void;
+  mode: string,
+  favoriteDogCount: number,
 }) => {
+
+   const context= useDog();
+   const{mode, handleModeChange, favoriteDogCount} = context
   return (
     <section id="main-section">
       <div className="container-header">
@@ -15,12 +21,12 @@ export const Section = ({
         <div className="selectors">
           {/* This should display the favorited count */}
           <div
-            className={`selector ${"active"}`}
+            className={`selector ${mode === "favorite" ? "active": ""}`}
             onClick={() => {
-              alert("click favorited");
+              handleModeChange("favorite")
             }}
           >
-            favorited ( {0} )
+            favorited ( {favoriteDogCount} )
           </div>
 
           {/* This should display the unfavorited count */}
