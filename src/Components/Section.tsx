@@ -1,4 +1,6 @@
 import { ReactNode } from "react";
+import { TDogContext } from "../types";
+import { useDog } from "../providers/DogContext";
 
 export const Section = ({
   label,
@@ -7,13 +9,15 @@ export const Section = ({
   // No more props than these two allowed
   label: string;
   children: ReactNode;
-  handleModeChange: (dogMode: string) => void;
-  mode: string,
-  favoriteDogCount: number,
 }) => {
+  const context: Partial<TDogContext> = useDog();
+  const { mode, handleModeChange, favoriteDogCount, unfavoriteDogCount } = context;
 
-   const context= useDog();
-   const{mode, handleModeChange, favoriteDogCount} = context
+  const handleClick = (typeOfMode: string): void => {
+  if(handleModeChange) {
+    handleModeChange(typeOfMode)
+  }
+ }
   return (
     <section id="main-section">
       <div className="container-header">
@@ -21,9 +25,9 @@ export const Section = ({
         <div className="selectors">
           {/* This should display the favorited count */}
           <div
-            className={`selector ${mode === "favorite" ? "active": ""}`}
+            className={`selector ${mode === "favorite" ? "active" : ""}`}
             onClick={() => {
-              handleModeChange("favorite")
+              handleClick("favorite");
             }}
           >
             favorited ( {favoriteDogCount} )
@@ -31,17 +35,17 @@ export const Section = ({
 
           {/* This should display the unfavorited count */}
           <div
-            className={`selector ${""}`}
+            className={`selector ${mode === "unfavorite" ? "active" : ""}`}
             onClick={() => {
-              alert("click unfavorited");
+              handleClick("unfavorite");
             }}
           >
-            unfavorited ( {10} )
+            unfavorited ( {unfavoriteDogCount} )
           </div>
           <div
-            className={`selector ${""}`}
+            className={`selector ${mode === "create"? "active" : ""}`}
             onClick={() => {
-              alert("clicked create dog");
+              handleClick("create")
             }}
           >
             create dog

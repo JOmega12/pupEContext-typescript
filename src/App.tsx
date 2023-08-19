@@ -2,9 +2,10 @@ import { CreateDogForm } from "./Components/CreateDogForm";
 import { Dogs } from "./Components/Dogs";
 import { Section } from "./Components/Section";
 import { DogProvider, useDog } from "./providers/DogContext";
+import { TDogContext } from "./types";
 
 const AppContainer = () => {
-  const context  = useDog();
+  const context: Partial<TDogContext>  = useDog();
   const { mode } = context;
   console.log(mode, 'mode')
   

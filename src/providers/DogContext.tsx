@@ -66,15 +66,26 @@ export const DogProvider = ({ children }: { children: React.ReactNode }) => {
     setMode(dogMode);
   };
 
-  const filteredDogs = () => {
-    if (mode === "favorite") {
+  // const filteredDogs = () => {
+  //   if (mode === "favorite") {
+  //     return favorite;
+  //   } else if (mode === "unfavorite") {
+  //     return unfavorite;
+  //   } else {
+  //     return dogs;
+  //   }
+  // };
+
+  const filteredDogs: Dog[] = (() => {
+    if (mode === "favorited") {
       return favorite;
-    } else if (mode === "unfavorite") {
-      return unfavorite;
-    } else {
-      return dogs;
     }
-  };
+
+    if (mode === "unfavorited") {
+      return unfavorite;
+    }
+    return dogs;
+  })();
 
 
   

@@ -19,6 +19,6 @@ export type TDogContext = {
   patchFavoriteDog: (dog: Dog) => void,
   favoriteDogCount: number,
   unfavoriteDogCount: number,
-  filteredDogs: () => Dog[],
+  filteredDogs: Dog[],
   handleModeChange: (dogMode: string) => void
 };
