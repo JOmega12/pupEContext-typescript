@@ -11,7 +11,7 @@
       "name": "Lew",
       "image": "/src/assets/corgi.png",
       "description": "Gasoline Computers up maroon OCR Funk Clothing Designer",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 1
     },
     {
@@ -25,35 +25,35 @@
       "name": "Jayne",
       "image": "/src/assets/corgi.png",
       "description": "Mountain Granite blockchains Roentgenium SAS beatae Northwest",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 3
     },
     {
       "name": "Fabiola",
       "image": "/src/assets/dalmation.png",
       "description": "compressing Berkshire Chrysler Cape Soap Operations Funk Coupe",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 4
     },
     {
       "name": "Lysanne",
       "image": "/src/assets/corgi.png",
       "description": "socialise paradigms repudiandae feed Folding tan Northwest radian",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 5
     },
     {
       "name": "Giuseppe",
       "image": "/src/assets/blue-heeler.png",
       "description": "West IP Shoes shrilly integrated Clothing transmit voluptate",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 6
     },
     {
       "name": "Garth",
       "image": "/src/assets/blue-heeler.png",
       "description": "youthfully female Jewelery bolívar auxiliary leverage Touring",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 7
     },
     {
@@ -67,85 +67,92 @@
       "name": "Lenora",
       "image": "/src/assets/corgi.png",
       "description": "Checking core Diesel Investment facilitate Direct Horizontal",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 9
     },
     {
       "name": "Maryse",
       "image": "/src/assets/chihuahua.avif",
       "description": "throughout Chicken monthly Rupee Georgia Iraqi via",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 10
     },
     {
       "name": "Emmie",
       "image": "/src/assets/boxer.png",
       "description": "streamline deliverables bus anti program before Northeast",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 11
     },
     {
       "name": "Jayde",
       "image": "/src/assets/chihuahua.avif",
       "description": "alliance payment Oriental deposit before Volvo Money Clothing",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 12
     },
     {
       "name": "Marianna",
       "image": "/src/assets/chihuahua.avif",
       "description": "driver Bicycle indigo North beatae Southwest azure Northwest",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 13
     },
     {
       "name": "Carlos",
       "image": "/src/assets/boxer.png",
       "description": "Pound Dam pixel Arabia Computers elbow Pop West",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 14
     },
     {
       "name": "Aleen",
       "image": "/src/assets/chihuahua.avif",
       "description": "Streamlined architecture Versatile North Versatile Van Dubnium Uzbekistan",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 15
     },
     {
       "name": "Lennie",
       "image": "/src/assets/boxer.png",
       "description": "AGP fatal female because Kansas",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 16
     },
     {
       "name": "Tessie",
       "image": "/src/assets/chihuahua.avif",
       "description": "Northwest indeed proud Corporate Nebraska",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 17
     },
     {
       "name": "Conner",
       "image": "/src/assets/corgi.png",
       "description": "circuit Trigender past ipsa Soap East Soft",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 18
     },
     {
       "name": "Demario",
       "image": "/src/assets/cowardly.png",
       "description": "integrated calculate Quality Designer Sleek deposit middleware",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 19
     },
     {
       "name": "sdf",
       "description": "asdf",
-      "isFavorite": false,
+      "isFavorite": true,
       "image": "/assets/boxer.jpeg",
       "id": 20
+    },
+    {
+      "name": "test",
+      "description": "test",
+      "isFavorite": false,
+      "image": "/assets/chihuahua.avif",
+      "id": 21
     }
   ]
 }

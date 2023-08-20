@@ -20,5 +20,6 @@ export type TDogContext = {
   favoriteDogCount: number,
   unfavoriteDogCount: number,
   filteredDogs: Dog[],
-  handleModeChange: (dogMode: string) => void
+  handleModeChange: (dogMode: string) => void,
+  isLoading: boolean,
 };

@@ -6,6 +6,7 @@ import {
 } from "react";
 import { Dog, TDogContext } from "../types";
 import { Requests } from "../api";
+import { toast } from "react-hot-toast";
 
 export const DogContext = createContext<TDogContext | undefined>(undefined);
 
@@ -25,6 +26,9 @@ export const DogProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     refetchDogs();
   }, []);
+
+
+
 
   const addDog = (dog: Dog) => {
     Requests.postDog({
@@ -47,8 +51,17 @@ export const DogProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const patchFavoriteDog = (dog: Dog) => {
+    setIsLoading(true);
     Requests.patchFavoriteForDog(dog)
       .then(() => refetchDogs())
+      .then(() => {
+        if(dog.isFavorite === false) {
+          toast.success(`You've favorite a good boi`);
+        } else {
+          toast.success(`You've unfavorited a good boi`);
+        }
+      })
+      .finally(() => setIsLoading(false))
       .catch((err) => console.log(err));
   };
 
@@ -65,16 +78,6 @@ export const DogProvider = ({ children }: { children: React.ReactNode }) => {
     }
     setMode(dogMode);
   };
-
-  // const filteredDogs = () => {
-  //   if (mode === "favorite") {
-  //     return favorite;
-  //   } else if (mode === "unfavorite") {
-  //     return unfavorite;
-  //   } else {
-  //     return dogs;
-  //   }
-  // };
 
   const filteredDogs: Dog[] = (() => {
     if (mode === "favorited") {
@@ -101,6 +104,7 @@ export const DogProvider = ({ children }: { children: React.ReactNode }) => {
         unfavoriteDogCount,
         filteredDogs,
         handleModeChange,
+        isLoading,
       }}
     >
       {children}

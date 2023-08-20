@@ -7,7 +7,6 @@ import { TDogContext } from "./types";
 const AppContainer = () => {
   const context: Partial<TDogContext>  = useDog();
   const { mode } = context;
-  console.log(mode, 'mode')
   
   return (
     <div className="App" style={{ backgroundColor: "skyblue" }}>
