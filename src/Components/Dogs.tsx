@@ -7,7 +7,7 @@ import { DogCard } from "./DogCard";
 // Todo: Refactor to get rid of props (THERE SHOULD BE NO PROPS DRILLING ON THIS COMPONENT)
 export const Dogs = () => {
   const context = useDog();
-  const { filteredDogs } = context || {}
+  const { filteredDogs } = context as TDogContext;
   
     return (
       //  the "<> </>"" are called react fragments, it's like adding all the html inside
