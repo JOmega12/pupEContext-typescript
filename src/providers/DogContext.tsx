@@ -28,8 +28,6 @@ export const DogProvider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
 
-
-
   const addDog = (dog: Dog) => {
     Requests.postDog({
       id: dog.id,
@@ -51,18 +49,34 @@ export const DogProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const patchFavoriteDog = (dog: Dog) => {
-    setIsLoading(true);
+    // setIsLoading(true);
+    //this is updating the state first then refetch
+    setDogs(dogs.map((dogz) => dogz.id === dog.id ? {...dog,  isFavorite: true}: dogz))
+
+    // const favoriteTypeDog = dogs.map((dog) => {
+    //   return dog.isFavorite;
+    // })
     Requests.patchFavoriteForDog(dog)
-      .then(() => refetchDogs())
-      .then(() => {
-        if(dog.isFavorite === false) {
-          toast.success(`You've favorite a good boi`);
-        } else {
-          toast.success(`You've unfavorited a good boi`);
-        }
+      .then((res) => {
+        if(!res.ok) {
+          setDogs(dogs);
+        } else return;
       })
-      .finally(() => setIsLoading(false))
       .catch((err) => console.log(err));
+
+
+
+    // Requests.patchFavoriteForDog(dog)
+    //   .then(() => refetchDogs())
+    //   .then(() => {
+    //     if(dog.isFavorite === false) {
+    //       toast.success(`You've favorite a good boi`);
+    //     } else {
+    //       toast.success(`You've unfavorited a good boi`);
+    //     }
+    //   })
+      // .finally(() => setIsLoading(false))
+      // .catch((err) => console.log(err));
   };
 
   const favorite = dogs.filter((dog) => dog.isFavorite === true);

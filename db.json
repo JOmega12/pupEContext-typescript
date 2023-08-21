@@ -1,158 +1,151 @@
 {
   "dogs": [
     {
-      "name": "Virgie",
-      "image": "/src/assets/chihuahua.avif",
-      "description": "Monitored middleware Frozen Cotton Chair",
-      "isFavorite": false,
+      "name": "Elian",
+      "image": "/public/assets/boxer.png",
+      "description": "magenta Coordinator hacking Buckinghamshire facilitate",
+      "isFavorite": true,
       "id": 0
     },
     {
-      "name": "Lew",
-      "image": "/src/assets/corgi.png",
-      "description": "Gasoline Computers up maroon OCR Funk Clothing Designer",
-      "isFavorite": true,
+      "name": "Charity",
+      "image": "/public/assets/chihuahua.avif",
+      "description": "impactful heuristic meter Nissan CLI ambitious seizure Concrete",
+      "isFavorite": false,
       "id": 1
     },
     {
-      "name": "Velma",
-      "image": "/src/assets/chihuahua.avif",
-      "description": "South Chicken hence female Convertible",
-      "isFavorite": true,
+      "name": "Rashawn",
+      "image": "/public/assets/dalmation.png",
+      "description": "Sedan generate Steel Idaho Jamaica",
+      "isFavorite": false,
       "id": 2
     },
     {
-      "name": "Jayne",
-      "image": "/src/assets/corgi.png",
-      "description": "Mountain Granite blockchains Roentgenium SAS beatae Northwest",
+      "name": "Lempi",
+      "image": "/public/assets/cowardly.png",
+      "description": "beyond status Implementation Guarani sleepy Kenya MTF",
       "isFavorite": true,
       "id": 3
     },
     {
-      "name": "Fabiola",
-      "image": "/src/assets/dalmation.png",
-      "description": "compressing Berkshire Chrysler Cape Soap Operations Funk Coupe",
+      "name": "Cordelia",
+      "image": "/public/assets/corgi.png",
+      "description": "Bronze instruction RSS Chrysler Dirham Granite entity",
       "isFavorite": false,
       "id": 4
     },
     {
-      "name": "Lysanne",
-      "image": "/src/assets/corgi.png",
-      "description": "socialise paradigms repudiandae feed Folding tan Northwest radian",
+      "name": "Emmie",
+      "image": "/public/assets/boxer.png",
+      "description": "Beauty synthesizing Sleek Jeep consequently",
       "isFavorite": false,
       "id": 5
     },
     {
-      "name": "Giuseppe",
-      "image": "/src/assets/blue-heeler.png",
-      "description": "West IP Shoes shrilly integrated Clothing transmit voluptate",
-      "isFavorite": true,
+      "name": "Omer",
+      "image": "/public/assets/corgi.png",
+      "description": "Cyclocross synthesize Technician District HTTP Jazz Drive",
+      "isFavorite": false,
       "id": 6
     },
     {
-      "name": "Garth",
-      "image": "/src/assets/blue-heeler.png",
-      "description": "youthfully female Jewelery bolívar auxiliary leverage Touring",
+      "name": "Carson",
+      "image": "/public/assets/chihuahua.avif",
+      "description": "Hatchback poison program Jamaica Xenon female generating payment",
       "isFavorite": false,
       "id": 7
     },
     {
-      "name": "Jamel",
-      "image": "/src/assets/corgi.png",
-      "description": "merry Chips Plastic tepid Tobago",
-      "isFavorite": true,
+      "name": "Leora",
+      "image": "/public/assets/blue-heeler.png",
+      "description": "barrel revolutionize style Elegant Baby",
+      "isFavorite": false,
       "id": 8
     },
     {
-      "name": "Lenora",
-      "image": "/src/assets/corgi.png",
-      "description": "Checking core Diesel Investment facilitate Direct Horizontal",
-      "isFavorite": false,
+      "name": "Gust",
+      "image": "/public/assets/blue-heeler.png",
+      "description": "teal salmon driver to Account withdrawal Electronic Avon",
+      "isFavorite": true,
       "id": 9
     },
     {
-      "name": "Maryse",
-      "image": "/src/assets/chihuahua.avif",
-      "description": "throughout Chicken monthly Rupee Georgia Iraqi via",
+      "name": "Delphia",
+      "image": "/public/assets/cowardly.png",
+      "description": "feed Generic embrace blue Taka whoa actually Elegant",
       "isFavorite": true,
       "id": 10
     },
     {
-      "name": "Emmie",
-      "image": "/src/assets/boxer.png",
-      "description": "streamline deliverables bus anti program before Northeast",
-      "isFavorite": false,
+      "name": "Marvin",
+      "image": "/public/assets/boxer.png",
+      "description": "modulo Alabama homogeneous Alabama Specialist",
+      "isFavorite": true,
       "id": 11
     },
     {
-      "name": "Jayde",
-      "image": "/src/assets/chihuahua.avif",
-      "description": "alliance payment Oriental deposit before Volvo Money Clothing",
-      "isFavorite": true,
+      "name": "Mittie",
+      "image": "/public/assets/chihuahua.avif",
+      "description": "collaborative Modern Beauty Bronze frame program Neon",
+      "isFavorite": false,
       "id": 12
     },
     {
-      "name": "Marianna",
-      "image": "/src/assets/chihuahua.avif",
-      "description": "driver Bicycle indigo North beatae Southwest azure Northwest",
-      "isFavorite": false,
+      "name": "Estefania",
+      "image": "/public/assets/boxer.png",
+      "description": "background Cisgender Northwest Screen grey",
+      "isFavorite": true,
       "id": 13
     },
     {
-      "name": "Carlos",
-      "image": "/src/assets/boxer.png",
-      "description": "Pound Dam pixel Arabia Computers elbow Pop West",
-      "isFavorite": true,
+      "name": "Adrianna",
+      "image": "/public/assets/blue-heeler.png",
+      "description": "Customer Electronic Cheese Hatchback Hybrid given Antimony",
+      "isFavorite": false,
       "id": 14
     },
     {
-      "name": "Aleen",
-      "image": "/src/assets/chihuahua.avif",
-      "description": "Streamlined architecture Versatile North Versatile Van Dubnium Uzbekistan",
+      "name": "Katheryn",
+      "image": "/public/assets/blue-heeler.png",
+      "description": "compressing gadzooks lifetime Licensed function",
       "isFavorite": true,
       "id": 15
     },
     {
-      "name": "Lennie",
-      "image": "/src/assets/boxer.png",
-      "description": "AGP fatal female because Kansas",
+      "name": "Darron",
+      "image": "/public/assets/corgi.png",
+      "description": "female obediently ADP Trigender Fundamental",
       "isFavorite": false,
       "id": 16
     },
     {
-      "name": "Tessie",
-      "image": "/src/assets/chihuahua.avif",
-      "description": "Northwest indeed proud Corporate Nebraska",
+      "name": "Ignatius",
+      "image": "/public/assets/boxer.png",
+      "description": "Rock Orchestrator virtual aut meh",
       "isFavorite": true,
       "id": 17
     },
     {
-      "name": "Conner",
-      "image": "/src/assets/corgi.png",
-      "description": "circuit Trigender past ipsa Soap East Soft",
+      "name": "Terrance",
+      "image": "/public/assets/cowardly.png",
+      "description": "Northeast Coordinator Rial overriding World tan Future",
       "isFavorite": true,
       "id": 18
     },
     {
-      "name": "Demario",
-      "image": "/src/assets/cowardly.png",
-      "description": "integrated calculate Quality Designer Sleek deposit middleware",
-      "isFavorite": true,
+      "name": "Eldon",
+      "image": "/public/assets/blue-heeler.png",
+      "description": "Practical Administrator female haptic Screen District Electric Supervisor",
+      "isFavorite": false,
       "id": 19
     },
     {
-      "name": "sdf",
-      "description": "asdf",
-      "isFavorite": true,
-      "image": "/assets/boxer.jpeg",
-      "id": 20
-    },
-    {
       "name": "test",
-      "description": "test",
-      "isFavorite": false,
+      "description": "testing doh",
+      "isFavorite": true,
       "image": "/assets/chihuahua.avif",
-      "id": 21
+      "id": 20
     }
   ]
 }
