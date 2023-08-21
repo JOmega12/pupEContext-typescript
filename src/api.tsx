@@ -2,11 +2,11 @@ import { Dog } from "./types";
 
 export const baseUrl = "http://localhost:3000/dogs";
 
-const getAllDogs = async ():Promise<Dog[]> => {
+const getAllDogs = async (): Promise<Dog[]> => {
   // fill out method
   return fetch(baseUrl)
     .then((res) => res.json())
-    .then((data: Dog[]) => data)
+    .then((data: Dog[]) => data);
 };
 
 const postDog = (dog: Dog) => {
@@ -23,25 +23,25 @@ const postDog = (dog: Dog) => {
   });
 };
 
-
 const deleteDogRequest = (dog: Dog) => {
   // fill out method
-  return fetch(`${baseUrl}/${dog.id}`)
-
+  return fetch(`${baseUrl}/${dog.id}`, {
+    method: "delete",
+  });
 };
 
 const patchFavoriteForDog = (dog: Dog) => {
   // fill out method
-  const { isFavorite } = dog; 
+  const { isFavorite } = dog;
   return fetch(`${baseUrl}/${dog.id}`, {
     headers: {
       "Content-Type": "application/json",
     },
     method: "PATCH",
     body: JSON.stringify({
-      isFavorite: !isFavorite
-    })
-  })
+      isFavorite: !isFavorite,
+    }),
+  });
 };
 
 export const Requests = {

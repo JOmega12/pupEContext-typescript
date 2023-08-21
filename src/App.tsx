@@ -5,21 +5,17 @@ import { DogProvider, useDog } from "./providers/DogContext";
 import { TDogContext } from "./types";
 
 const AppContainer = () => {
-  const context: Partial<TDogContext>  = useDog();
+  const context: Partial<TDogContext> = useDog();
   const { mode } = context;
-  
+
   return (
     <div className="App" style={{ backgroundColor: "skyblue" }}>
       <header>
         <h1>pup-e-picker (Functional)</h1>
       </header>
       <Section label={"Dogs: "}>
-      {mode !== 'create' && (
-        <Dogs />
-      )}
-      {mode === 'create' && (
-        <CreateDogForm />
-      )}
+        {mode !== "create" && <Dogs />}
+        {mode === "create" && <CreateDogForm />}
       </Section>
     </div>
   );

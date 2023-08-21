@@ -15,31 +15,10 @@
       "id": 1
     },
     {
-      "name": "Rashawn",
-      "image": "/public/assets/dalmation.png",
-      "description": "Sedan generate Steel Idaho Jamaica",
-      "isFavorite": false,
-      "id": 2
-    },
-    {
-      "name": "Lempi",
-      "image": "/public/assets/cowardly.png",
-      "description": "beyond status Implementation Guarani sleepy Kenya MTF",
-      "isFavorite": true,
-      "id": 3
-    },
-    {
-      "name": "Cordelia",
-      "image": "/public/assets/corgi.png",
-      "description": "Bronze instruction RSS Chrysler Dirham Granite entity",
-      "isFavorite": false,
-      "id": 4
-    },
-    {
       "name": "Emmie",
       "image": "/public/assets/boxer.png",
       "description": "Beauty synthesizing Sleek Jeep consequently",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 5
     },
     {

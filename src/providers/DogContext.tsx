@@ -1,9 +1,4 @@
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { Dog, TDogContext } from "../types";
 import { Requests } from "../api";
 import { toast } from "react-hot-toast";
@@ -27,7 +22,6 @@ export const DogProvider = ({ children }: { children: React.ReactNode }) => {
     refetchDogs();
   }, []);
 
-
   const addDog = (dog: Dog) => {
     Requests.postDog({
       id: dog.id,
@@ -41,42 +35,41 @@ export const DogProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const deleteDog = (dog: Dog) => {
+    const updatedDogs = dogs.filter((dogz) => dogz.id !== dog.id);
+    setDogs(updatedDogs);
     Requests.deleteDogRequest(dog)
+      .then((res) => {
+        if (!res.ok) {
+          setDogs(dogs);
+        } else {
+          toast.success(`You've deleted a good boi`);
+        }
+      })
       .then(() => {
-        return refetchDogs();
+        refetchDogs();
       })
       .catch((err) => console.log(err));
   };
 
   const patchFavoriteDog = (dog: Dog) => {
-    // setIsLoading(true);
-    //this is updating the state first then refetch
-    setDogs(dogs.map((dogz) => dogz.id === dog.id ? {...dog,  isFavorite: true}: dogz))
-
-    // const favoriteTypeDog = dogs.map((dog) => {
-    //   return dog.isFavorite;
-    // })
+    setDogs(
+      dogs.map((dogz) =>
+        dogz.id === dog.id ? { ...dogz, isFavorite: !dogz.isFavorite } : dogz
+      )
+    );
     Requests.patchFavoriteForDog(dog)
       .then((res) => {
-        if(!res.ok) {
+        if (!res.ok) {
           setDogs(dogs);
-        } else return;
+        } else {
+          if (dog.isFavorite) {
+            toast.success(`You've favorite a good boi`);
+          } else {
+            toast.success(`You've unfavorited a good boi`);
+          }
+        }
       })
       .catch((err) => console.log(err));
-
-
-
-    // Requests.patchFavoriteForDog(dog)
-    //   .then(() => refetchDogs())
-    //   .then(() => {
-    //     if(dog.isFavorite === false) {
-    //       toast.success(`You've favorite a good boi`);
-    //     } else {
-    //       toast.success(`You've unfavorited a good boi`);
-    //     }
-    //   })
-      // .finally(() => setIsLoading(false))
-      // .catch((err) => console.log(err));
   };
 
   const favorite = dogs.filter((dog) => dog.isFavorite === true);
@@ -94,18 +87,16 @@ export const DogProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const filteredDogs: Dog[] = (() => {
-    if (mode === "favorited") {
+    if (mode === "favorite") {
       return favorite;
     }
 
-    if (mode === "unfavorited") {
+    if (mode === "unfavorite") {
       return unfavorite;
     }
     return dogs;
   })();
 
-
-  
   return (
     <DogContext.Provider
       value={{

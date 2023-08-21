@@ -14,10 +14,10 @@ export const Section = ({
   const { mode, handleModeChange, favoriteDogCount, unfavoriteDogCount } = context;
 
   const handleClick = (typeOfMode: string): void => {
-  if(handleModeChange) {
-    handleModeChange(typeOfMode)
-  }
- }
+    if (handleModeChange) {
+      handleModeChange(typeOfMode);
+    }
+  };
   return (
     <section id="main-section">
       <div className="container-header">
@@ -43,9 +43,9 @@ export const Section = ({
             unfavorited ( {unfavoriteDogCount} )
           </div>
           <div
-            className={`selector ${mode === "create"? "active" : ""}`}
+            className={`selector ${mode === "create" ? "active" : ""}`}
             onClick={() => {
-              handleClick("create")
+              handleClick("create");
             }}
           >
             create dog
