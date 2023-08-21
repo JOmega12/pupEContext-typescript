@@ -67,7 +67,7 @@
       "name": "Mittie",
       "image": "/public/assets/chihuahua.avif",
       "description": "collaborative Modern Beauty Bronze frame program Neon",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 12
     },
     {
@@ -76,13 +76,6 @@
       "description": "background Cisgender Northwest Screen grey",
       "isFavorite": true,
       "id": 13
-    },
-    {
-      "name": "Adrianna",
-      "image": "/public/assets/blue-heeler.png",
-      "description": "Customer Electronic Cheese Hatchback Hybrid given Antimony",
-      "isFavorite": false,
-      "id": 14
     },
     {
       "name": "Katheryn",
