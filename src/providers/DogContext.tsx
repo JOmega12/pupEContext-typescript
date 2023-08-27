@@ -113,6 +113,9 @@ export const DogProvider = ({ children }: { children: React.ReactNode }) => {
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const useDog = () => {
-  const context = useContext(DogContext) || {};
+  const context = useContext(DogContext);
+  if(context === undefined) {
+    throw new Error("you should always use `useDog` within a scope of a DogContext")
+  }
   return context;
 };

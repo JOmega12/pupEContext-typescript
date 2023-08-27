@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { dogPictures } from "../dog-pictures";
 import { useDog } from "../providers/DogContext";
-import { TDogContext } from "../types";
 
 export const CreateDogForm = () =>
   // no props allowed
   {
-    const context = useDog();
-    const { addDog, isLoading } = context as TDogContext;
+    const { addDog, isLoading } = useDog();
 
     const [nameInput, setNameInput] = useState("");
     const [descriptionInput, setDescriptionInput] = useState("");
