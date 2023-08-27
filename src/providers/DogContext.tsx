@@ -61,12 +61,6 @@ export const DogProvider = ({ children }: { children: React.ReactNode }) => {
       .then((res) => {
         if (!res.ok) {
           setDogs(dogs);
-        } else {
-          if (dog.isFavorite) {
-            toast.success(`You've favorite a good boi`);
-          } else {
-            toast.success(`You've unfavorited a good boi`);
-          }
         }
       })
       .catch((err) => console.log(err));
